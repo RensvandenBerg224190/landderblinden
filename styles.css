@@ -1,0 +1,101 @@
+:root {
+  --ink: #111111;
+  --bg: #ffffff;
+  --blue: #006ba6; /* Pantone 307 C */
+  --pink: #e0004d; /* Pantone 1925 C */
+  --red: #cf4520; /* Pantone 173 C */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Futura, "Futura PT", "Futura Std", Jost, "Century Gothic",
+    "Twentieth Century", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 1.5rem 24vh;
+  gap: 0;
+}
+
+.page.page-foto {
+  padding: 8vh 1.5rem;
+}
+
+.logo {
+  display: block;
+  width: min(86vw, 34rem);
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.logo-loop {
+  margin-bottom: -1.5rem;
+}
+
+.logo-foto {
+  width: min(72vw, 26rem);
+  margin-bottom: 1.75rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-synthesis: none;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--blue);
+}
+
+.contact a:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 4px;
+}
+
+@media (max-width: 540px) {
+  .page {
+    padding: 6vh 1.25rem 22vh;
+  }
+
+  .page.page-foto {
+    padding: 8vh 1.25rem;
+  }
+
+  .contact {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+}
